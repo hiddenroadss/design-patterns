@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const singleton_1 = require("./creational/singleton");
+const test_1 = require("./test");
+let tracker = singleton_1.StatsTracker.instance;
+tracker.widgetViews += 90;
+tracker.buttonClicks += 90;
+console.log(tracker.widgetViews);
+console.log(tracker.buttonClicks);
+tracker.widgetViews += 10;
+(0, test_1.test)();
